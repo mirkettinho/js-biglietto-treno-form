@@ -1,0 +1,23 @@
+body{
+  background-image: url(../img/pexels-jéshoots-253647.jpg);
+  background-size: cover;
+}
+
+h1{
+  color: #e04138;
+}
+
+
+#ticket{
+  display: none;
+  color: orange;
+  background-color: white;
+  height: 400px;
+  background-image: url(../img/pexels-pixabay-302428.jpg);
+  background-size: cover;
+  
+}
+
+.back{
+  border: 1px solid black;
+}

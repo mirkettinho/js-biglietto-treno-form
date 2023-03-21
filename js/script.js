@@ -10,6 +10,15 @@ genera.addEventListener("click", function(){
   if (personalData.value == ""){
     alert("completa il form")
   }
+
+  if (userKm.value == ""){
+    alert("completa il form")
+  }
+
+  if (age.value == ""){
+    alert("completa il form")
+  }
+
   
   prezzoBiglietto = kmPrice * userKm.value;
   console.log("prova" , prezzoBiglietto)
@@ -17,17 +26,33 @@ genera.addEventListener("click", function(){
   
   if(age.value == "under-18"){
     prezzoBiglietto = prezzoBiglietto * 0.8
-    console.log(`il biglietto` + personalData.value + `costa` + prezzoBiglietto.toFixed(2))
+    document.getElementById("offerta").innerHTML = "Biglietto Gold"
+    document.getElementById("prezzo-finale").innerHTML = prezzoBiglietto.toFixed(2) + "euro"
   }
   
   if(age.value == "18"){
     prezzoBiglietto = prezzoBiglietto
-    console.log(`il biglietto` + personalData.value + `costa` + prezzoBiglietto.toFixed(2))
+    document.getElementById("offerta").innerHTML = "Biglietto Standard"
+    document.getElementById("prezzo-finale").innerHTML = prezzoBiglietto.toFixed(2) + "euro"
   }
   
   if(age.value == "over-65"){
     prezzoBiglietto = prezzoBiglietto * 0.6
-    console.log(`il biglietto` +  personalData.value + `costa` + prezzoBiglietto.toFixed(2))
+    document.getElementById("offerta").innerHTML = "Biglietto Silver"
+    document.getElementById("prezzo-finale").innerHTML = prezzoBiglietto.toFixed(2) + "euro"
   }
+
+  if(age.value == "option"){
+    alert("completa il form")
+  }
+
+
+  document.getElementById("ticket").style.display = "block";
+  document.getElementById("name-passenger").innerHTML = personalData.value;
+}
+)
+
+document.querySelector(".reset").addEventListener ("click", function(){
+  console.log*
 }
 )
